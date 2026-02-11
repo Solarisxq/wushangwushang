@@ -1,0 +1,129 @@
+/* --- Global Reset & Box Model (Lecture 4, Page 36) --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background-color: #f0f0f0;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* --- Fixed Navbar --- */
+.navbar {
+    background-color: #ff6600; /* Naruto Orange */
+    padding: 15px 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.nav-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+
+.logo { color: white; font-weight: bold; font-size: 1.5rem; }
+.nav-links { display: flex; list-style: none; }
+.nav-links li a { color: white; text-decoration: none; margin-left: 20px; }
+
+/* --- CSS Animation (Lecture 4, Page 70) --- */
+.hero-section {
+    background-color: #222;
+    color: white;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.animate-title {
+    font-size: 3rem;
+    color: #ff6600;
+    animation: fadeIn 2s ease-in;
+    
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* --- Layout Container --- */
+.content-box {
+    max-width: 900px;
+    margin: 40px auto;
+    background: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+h2 {
+    border-left: 5px solid #ff6600;
+    padding-left: 15px;
+    margin: 30px 0 15px 0;
+}
+
+/* --- Cards with Hover Effect --- */
+.card-wrapper {
+    display: flex;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.character-card {
+    flex: 1;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.character-card:hover {
+    transform: translateY(-5px);
+    border-color: #ff6600;
+    border-radius:50%
+}
+
+.character-card img {
+    width: 100%;
+    max-width: 180px;
+    height: auto;
+}
+
+/* --- Media & Table --- */
+.media-container {
+    border: 5px solid #222;
+    margin: 20px 0;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: center;
+}
+
+th { background-color: #ff6600; color: white; }
+
+footer {
+    text-align: center;
+    padding: 40px;
+    color: #888;
+}
